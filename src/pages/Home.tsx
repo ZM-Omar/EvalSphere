@@ -1,11 +1,22 @@
-import { Card, CardHeader, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardHeader, Image } from "@nextui-org/react";
 
 export default function Home() {
     return (
-        <div className="flex items-center justify-center">
-            <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
+        <div className="m-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div className="relative h-32 w-80">
+                        <p>When controlling the flow of text, using the CSS property
+                        <span className="inline">display: inline</span>
+                        will cause the text inside the element to wrap normally.</p>
 
-                <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                        <p>While using the property <span className="inline-block">display: inline-block</span>
+                        will wrap the element to prevent the text inside from extending beyond its parent.</p>
+
+                        <p>Lastly, using the property <span className="block">display: block</span>
+                        will put the element on its own line and fill its parent.</p>
+                    </div>
+            <div className="min-h-[100pc] rounded-lg">
+                    
+                <Card>
                     <CardHeader className="absolute z-10 top-1 flex-col !items-start">
                         <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
                         <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
@@ -17,65 +28,9 @@ export default function Home() {
                         src="https://nextui.org/images/card-example-4.jpeg"
                     />
                 </Card>
-                <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                        <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
-                        <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
-                    </CardHeader>
-                    <Image
-                        removeWrapper
-                        alt="Card background"
-                        className="z-0 w-full h-full object-cover"
-                        src="https://nextui.org/images/card-example-3.jpeg"
-                    />
-                </Card>
-                <Card className="col-span-12 sm:col-span-4 h-[300px]">
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                        <p className="text-tiny text-white/60 uppercase font-bold">Supercharged</p>
-                        <h4 className="text-white font-medium text-large">Creates beauty like a beast</h4>
-                    </CardHeader>
-                    <Image
-                        removeWrapper
-                        alt="Card background"
-                        className="z-0 w-full h-full object-cover"
-                        src="https://nextui.org/images/card-example-2.jpeg"
-                    />
-                </Card>
-                <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
-                    <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                        <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-                        <h4 className="text-black font-medium text-2xl">Acme camera</h4>
-                    </CardHeader>
-                    <Image
-                        removeWrapper
-                        alt="Card example background"
-                        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
-                        src="https://nextui.org/images/card-example-6.jpeg"
-                    />
-                    <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-                        <div>
-                            <p className="text-black text-tiny">Available soon.</p>
-                            <p className="text-black text-tiny">Get notified.</p>
-                        </div>
-                        <Button className="text-tiny" color="primary" radius="full" size="sm">
-                            Notify Me
-                        </Button>
-                    </CardFooter>
-                </Card>
-                <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
-                    <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                        <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
-                        <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
-                    </CardHeader>
-                    <Image
-                        removeWrapper
-                        alt="Relaxing app background"
-                        className="z-0 w-full h-full object-cover"
-                        src="https://nextui.org/images/card-example-5.jpeg"
-                    />
-
-                </Card>
             </div>
+            
+            
         </div>
     )
 }
