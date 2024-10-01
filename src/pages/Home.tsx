@@ -1,36 +1,27 @@
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export default function Home() {
     return (
-        <div className="m-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <div className="relative h-32 w-80">
-                        <p>When controlling the flow of text, using the CSS property
-                        <span className="inline">display: inline</span>
-                        will cause the text inside the element to wrap normally.</p>
+        <div>
+            <div
+                className="text-center">
+                <motion.h1 className="font-bold font-sans italic text-9xl box"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 5.0,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}
+                >
 
-                        <p>While using the property <span className="inline-block">display: inline-block</span>
-                        will wrap the element to prevent the text inside from extending beyond its parent.</p>
+                    EvalSphere
+                </motion.h1>
 
-                        <p>Lastly, using the property <span className="block">display: block</span>
-                        will put the element on its own line and fill its parent.</p>
-                    </div>
-            <div className="min-h-[100pc] rounded-lg">
-                    
-                <Card>
-                    <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                        <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-                        <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
-                    </CardHeader>
-                    <Image
-                        removeWrapper
-                        alt="Card background"
-                        className="z-0 w-full h-full object-cover"
-                        src="https://nextui.org/images/card-example-4.jpeg"
-                    />
-                </Card>
             </div>
-            
-            
+
+
+
         </div>
     )
 }

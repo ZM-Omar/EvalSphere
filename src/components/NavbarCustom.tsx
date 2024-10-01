@@ -32,7 +32,7 @@ export default function NavbarCustom() {
             shouldHideOnScroll
         >
             <NavbarBrand>
-                <Link className="font-bold text-inherit text-2xl" href="/">EvalSphere</Link>
+                <Link className="font-bold text-inherit text-2xl" href="/"><img width="50" src="public\img\Logo.png" alt="" /></Link>
             </NavbarBrand>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
